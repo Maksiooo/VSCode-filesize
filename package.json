@@ -1,0 +1,90 @@
+{
+  "name": "vsc-filesize",
+  "displayName": "VSCode filesize",
+  "description": "File size in the status bar",
+  "version": "0.0.2",
+  "publisher": "Maksiooo2602",
+  "author": {
+    "name": "Maksiooo"
+  },
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Maksiooo/VSCode-filesize"
+  },
+  "bugs": {
+    "url": "https://github.com/Maksiooo/VSCode-filesize/issues"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "Filesize",
+    "filesize",
+    "file-size",
+    "vsc-file-size",
+    "vscfilesize",
+    "vsc-filesize",
+    "vscode-filesize",
+    "vscode-file-size"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.js",
+  "icon": "icon.png",
+  "contributes": {
+    "commands": [
+      {
+      "command": "filesize.Contact",
+      "category": "VSCode Filesize",
+      "title": "Contact to developer"
+      },
+      {
+        "command": "filesize.StatusBarShow",
+        "category": "VSCode Filesize",
+        "title": "Show Filesize Status Bar"
+      },
+      {
+        "command": "filesize.StatusBarHide",
+        "category": "VSCode Filesize",
+        "title": "Hide Filesize Status Bar"
+      }
+  ],
+    "configuration": [
+      {
+        "title": "VSCode File size",
+        "properties": {
+          "vsc-file-size.position": {
+            "type": "string",
+            "default": "right",
+            "description": "You can set 'right' or 'left' position."
+          },
+          "vsc-file-size.priority": {
+            "type": "integer",
+            "default": 0,
+            "description": "Higher values - more to the left."
+          }
+        }
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^12.11.7",
+    "@types/vscode": "^1.52.0",
+    "eslint": "^7.15.0",
+    "glob": "^7.1.6",
+    "mocha": "^8.1.3",
+    "typescript": "^4.1.2",
+    "vscode-test": "^1.4.1"
+  }
+}
